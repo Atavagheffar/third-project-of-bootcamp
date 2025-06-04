@@ -4,10 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
     <title>TODO List</title>
   </head>
   <body>
-    <h1>hello world</h1>
+    <div id="main">
+      <section id="section1">
+        <input type="text" name="" id="title" placeholder="Title" />
+        <textarea name="" id="description" placeholder="Description"></textarea>
+
+        <div id="Subtask">
+          <div class="subHeader">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="24" height="24" fill="white" fill-opacity="0.01" />
+              <path
+                d="M5 12.991C5 12.998 19.005 13 19.005 13C18.999 13 19 5.009 19 5.009C19 5.002 4.995 5 4.995 5C5.001 5 5 12.991 5 12.991ZM3 5.01C3 3.899 3.893 3 4.995 3H19.005C20.107 3 21 3.902 21 5.009V12.991C21 14.101 20.107 15 19.005 15H4.995C4.4642 14.9976 3.95603 14.7847 3.582 14.4081C3.20798 14.0315 2.99867 13.5218 3 12.991V5.01ZM19 19C18.995 20.105 18.1 21 16.994 21H7.006C6.47525 20.9992 5.96639 20.7884 5.59053 20.4137C5.21468 20.039 5.00238 19.5307 5 19H19ZM20 16C19.9995 16.5292 19.7894 17.0367 19.4158 17.4115C19.0421 17.7863 18.5352 17.9979 18.006 18H5.994C5.46485 17.9976 4.95814 17.786 4.58454 17.4112C4.21093 17.0365 4.00079 16.5292 4 16H20Z"
+                fill="black"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.674 11.331C11.034 11.691 11.615 11.691 11.974 11.331L14.732 8.568C14.8904 8.39281 14.9753 8.16343 14.9692 7.92734C14.9631 7.69126 14.8665 7.46655 14.6993 7.29975C14.5321 7.13295 14.3072 7.03683 14.0711 7.0313C13.835 7.02576 13.6058 7.11122 13.431 7.27L11.323 9.38L10.568 8.626C10.3934 8.46502 10.1632 8.37782 9.92574 8.38265C9.68827 8.38748 9.46187 8.48397 9.29392 8.65192C9.12597 8.81987 9.02948 9.04627 9.02465 9.28375C9.01982 9.52122 9.10702 9.75136 9.268 9.926L10.674 11.331Z"
+                fill="black"
+              />
+            </svg>
+            <p>Subtask</p>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1496_1254)">
+                <rect width="20" height="20" fill="white" fill-opacity="0.01" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.25 8.75V5C11.25 4.66848 11.1183 4.35054 10.8839 4.11612C10.6495 3.8817 10.3315 3.75 10 3.75C9.66848 3.75 9.35054 3.8817 9.11612 4.11612C8.8817 4.35054 8.75 4.66848 8.75 5V8.75H5C4.66848 8.75 4.35054 8.8817 4.11612 9.11612C3.8817 9.35054 3.75 9.66848 3.75 10C3.75 10.3315 3.8817 10.6495 4.11612 10.8839C4.35054 11.1183 4.66848 11.25 5 11.25H8.75V15C8.75 15.3315 8.8817 15.6495 9.11612 15.8839C9.35054 16.1183 9.66848 16.25 10 16.25C10.3315 16.25 10.6495 16.1183 10.8839 15.8839C11.1183 15.6495 11.25 15.3315 11.25 15V11.25H15C15.3315 11.25 15.6495 11.1183 15.8839 10.8839C16.1183 10.6495 16.25 10.3315 16.25 10C16.25 9.66848 16.1183 9.35054 15.8839 9.11612C15.6495 8.8817 15.3315 8.75 15 8.75H11.25ZM2.5 0H17.5C18.163 0 18.7989 0.263392 19.2678 0.732233C19.7366 1.20107 20 1.83696 20 2.5V17.5C20 18.163 19.7366 18.7989 19.2678 19.2678C18.7989 19.7366 18.163 20 17.5 20H2.5C1.83696 20 1.20107 19.7366 0.732233 19.2678C0.263392 18.7989 0 18.163 0 17.5V2.5C0 1.83696 0.263392 1.20107 0.732233 0.732233C1.20107 0.263392 1.83696 0 2.5 0V0Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1496_1254">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="box1" id="box1" value="hello" />
+            <label for="">Hello</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="box2" id="box2" value="placeholder" />
+            <label for="box2">PlaceHolder</label>
+          </div>
+        </div>
+        <div id="assignee">
+          <div id="assigneeHeader">
+            <svg
+              width="12"
+              height="18"
+              viewBox="0 0 12 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 11C0 9.895 0.902 9 2.009 9H9.991C11.101 9 12 9.894 12 11.006V15.446C12 18.851 0 18.851 0 15.446V11Z"
+                fill="black"
+              />
+              <path
+                d="M6 8C8.20914 8 10 6.20914 10 4C10 1.79086 8.20914 0 6 0C3.79086 0 2 1.79086 2 4C2 6.20914 3.79086 8 6 8Z"
+                fill="black"
+              />
+            </svg>
+            <p>Assignee</p>
+            <p>*</p>
+          </div>
+          <div id="radiobuttons">
+            <div class="radiobutton">
+              <input type="radio" name="" id="" />
+              <label for="">Taha Hosseinpour</label>
+            </div>
+            <div class="radiobutton">
+              <input type="radio" name="" id="" />
+              <label for="">S.h Mostafavi</label>
+            </div>
+            <div class="radiobutton">
+              <input type="radio" name="" id="" />
+              <label for="">Milad Mirzaei</label>
+            </div>
+          </div>
+        </div>
+        <div id="mainButtons">
+          <button>Clear All</button>
+          <button id="createButt">Create Card</button>
+        </div>
+      </section>
+      <section id="section2">
+        <h3>TO DO</h3>
+      </section>
+      <section id="section3">
+        <h3>DOING</h3>
+      </section>
+      <section id="section4">
+        <h3>DONE</h3>
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
