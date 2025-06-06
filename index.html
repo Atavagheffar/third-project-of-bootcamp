@@ -64,12 +64,18 @@
             </svg>
           </div>
           <div class="checkbox">
-            <input type="checkbox" name="box1" id="box1" value="hello" />
-            <label for="">Hello</label>
+            <input
+              type="checkbox"
+              name="box"
+              id="box1"
+              value="subtask-A"
+              checked
+            />
+            <label for="">subtask A</label>
           </div>
           <div class="checkbox">
-            <input type="checkbox" name="box2" id="box2" value="placeholder" />
-            <label for="box2">PlaceHolder</label>
+            <input type="checkbox" name="box" id="box2" value="subtask-B" />
+            <label for="box2">subtask B</label>
           </div>
         </div>
         <div id="assignee">
@@ -96,20 +102,34 @@
             <p>*</p>
           </div>
           <div id="radiobuttons">
-            <div class="radiobutton">
-              <input type="radio" name="" id="" />
-              <label for="">Taha Hosseinpour</label>
-            </div>
-            <div class="radiobutton">
-              <input type="radio" name="" id="" />
-              <label for="">S.h Mostafavi</label>
-            </div>
-            <div class="radiobutton">
-              <input type="radio" name="" id="" />
-              <label for="">Milad Mirzaei</label>
-            </div>
+            <input
+              type="radio"
+              name="Assignee"
+              id="person1"
+              value="Taha Hosseinpour"
+              checked
+            />
+            Taha Hosseinpour
+            <br />
+            <input
+              type="radio"
+              name="Assignee"
+              id="person2"
+              value="S.h Mostafavi"
+            />
+            S.h Mostafavi
+            <br />
+            <input
+              type="radio"
+              name="Assignee"
+              id="person3"
+              value="Milad Mirzaei"
+            />
+            Milad Mirzaei
+            <br />
           </div>
         </div>
+        <input type="date" name="" id="datePick" />
         <div id="mainButtons">
           <button>Clear All</button>
           <button id="createButt">Create Card</button>
@@ -117,6 +137,7 @@
       </section>
       <section id="section2">
         <h3>TO DO</h3>
+        <!-- <p id="demo"></p> -->
       </section>
       <section id="section3">
         <h3>DOING</h3>
