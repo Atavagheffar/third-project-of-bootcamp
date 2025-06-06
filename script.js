@@ -2,7 +2,7 @@ console.log(document.getElementById("createButt"));
 
 document.getElementById("createButt").addEventListener("click", createTask);
 
-// *********************drag and drop********************
+// *********************drag and drop
 function dragstartHandler(ev) {
   ev.dataTransfer.setData("div", ev.target.id);
 }
@@ -13,14 +13,20 @@ function dragoverHandler(ev) {
 
 function dropHandler(ev) {
   ev.preventDefault();
-  const data = ev.dataTransfer.getData("div");
-  ev.target.appendChild(document.getElementById(data));
-}
 
+  const data = ev.dataTransfer.getData("div");
+  const draggedElement = document.getElementById(data);
+
+  let dropZone = ev.target;
+  while (!dropZone.classList.contains("column") && dropZone !== document.body) {
+    dropZone = dropZone.parentNode;
+  }
+  dropZone.appendChild(draggedElement);
+}
 // ************************************************************
 function createTask() {
   console.log("button clicked");
-  // ***********************date and time*******************
+  // *********************date and time
   console.log(document.getElementById("datePick").value);
   let dateAta = document.getElementById("datePick").value;
   const months = [
@@ -46,7 +52,7 @@ function createTask() {
   let taskDate = document.createElement("p");
   taskDate.setAttribute("id", "taskdate");
   taskDate.innerHTML = day + " / " + month + "," + date;
-  // ********************title and desc******************
+  // *********************title and desc
   let todoSec = document.getElementById("section2");
   let boxtitle = document.getElementById("title").value;
   let boxdesc = document.getElementById("description").value;
@@ -68,7 +74,7 @@ function createTask() {
   let taskdesc = document.createElement("p");
   taskdesc.innerHTML = boxdesc;
 
-  // *********************close button********************
+  // *********************close button
   let close = document.createElement("span");
   close.className = "close";
   close.innerHTML = "❌";
@@ -79,7 +85,7 @@ function createTask() {
     taskBox.style.display = "none";
   };
 
-  // *********************Assignee checking*******************
+  // *********************Assignee checking
 
   let assignee = document.createElement("h4");
   assignee.setAttribute("class", "assignee");
@@ -98,7 +104,7 @@ function createTask() {
       "Assignee to: " + document.getElementById("person3").value;
   }
 
-  // *********************subtask checking***********************
+  // *********************subtask checking
 
   let subtask = document.createElement("h4");
   subtask.setAttribute("class", "subtask");
@@ -119,8 +125,7 @@ function createTask() {
     console.log("No subtask selected");
     subtask.innerHTML = "No subtask selected";
   }
-
-  // *********************build card***********************
+  // *********************build card
   taskBox.appendChild(taskTitle);
   taskBox.appendChild(close);
   taskBox.appendChild(taskDate);
