@@ -2,6 +2,22 @@ console.log(document.getElementById("createButt"));
 
 document.getElementById("createButt").addEventListener("click", createTask);
 
+// *********************drag and drop********************
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("div", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("div");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+// ************************************************************
 function createTask() {
   console.log("button clicked");
   // ***********************date and time*******************
@@ -39,6 +55,11 @@ function createTask() {
 
   let taskBox = document.createElement("div");
   taskBox.className = "taskBox";
+  taskBox.setAttribute("id", "taskBoxNew");
+  // taskBox.setAttribute("ondrop", "dropHandler(event)");
+  // taskBox.setAttribute("ondragover", "dragoverHandler(event)");
+  taskBox.setAttribute("draggable", "true");
+  taskBox.setAttribute("ondragstart", "dragstartHandler(event)");
   taskBox.style.position = "relative";
   //   taskBox.innerHTML = "test 1";
 
