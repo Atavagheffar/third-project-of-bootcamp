@@ -11,14 +11,19 @@
   background-color: #f2f4f7;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  /* flex-wrap: nowrap; */
+  /* justify-content: space-evenly; */
   gap: 1%;
+}
+.mainLeftpanel {
+  width: 20vw;
+  height: 100%;
+  display: flex;
 }
 
 #section1 {
-  width: 23%;
-  padding: 1%;
+  width: 100%;
+  padding: 4%;
   background-color: white;
   border-radius: 8px;
   border: 1px solid gray;
@@ -33,9 +38,9 @@
   width: 100%;
   height: 5%;
   padding: 5%;
-  border: 1px solid gray;
+  border: 1px solid transparent;
   border-radius: 8px;
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
@@ -43,20 +48,22 @@
   color: #667085;
   margin-bottom: 20px;
   text-align: start;
+
+  transition: all 0.3s ease-in-out;
 }
 
 #section1 > input:hover,
 #section1 > textarea:hover {
-  border: 1px solid yellow;
+  border: 1px solid black;
   box-shadow: 0 0 10px gray;
 }
 
 #section1 > textarea {
   width: 100%;
   padding: 5%;
-  border: 1px solid gray;
+  border: 1px solid transparent;
   border-radius: 8px;
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
@@ -64,6 +71,7 @@
   color: #667085;
   margin-bottom: 20px;
   text-align: start;
+  transition: all 0.3s ease-in-out;
 }
 #Subtask,
 #assignee {
@@ -86,7 +94,7 @@
 }
 .subHeader > p,
 #assigneeHeader > p {
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
@@ -109,6 +117,7 @@
   align-items: center;
 }
 #radiobuttons {
+  padding-right: 5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -134,7 +143,7 @@
   color: #ff1616;
   border: 2px solid #ff1616;
   border-radius: 8px;
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -147,28 +156,36 @@
   color: white;
   border: 2px solid #000;
   border-radius: 8px;
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -3%;
 }
 /* ************* */
+.mainRightpanel {
+  /* width: 75%; */
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
 #section2,
 #section3,
 #section4 {
-  width: 24%;
+  width: 31%;
   padding: 1%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  /* background-color: #1b4ea7; */
 }
 
 #section2 > h3,
 #section3 > h3,
 #section4 > h3 {
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 28px;
   line-height: 100%;
@@ -203,7 +220,7 @@
 } */
 
 .taskBox h3 {
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
@@ -212,7 +229,7 @@
 }
 
 .taskBox p {
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
@@ -233,4 +250,63 @@
 .close:hover {
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 0.9;
+}
+/* **********************media queries*********************** */
+/* for tablets */
+@media screen and (max-width: 768px) {
+  #main {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blue; */
+    overflow-y: scroll;
+    gap: 20px;
+  }
+  .mainLeftpanel {
+    width: 35vw;
+  }
+  #section1 {
+    width: 35vw;
+  }
+  .mainRightpanel {
+    width: 105vw;
+    gap: 10px;
+  }
+  #section2,
+  #section3,
+  #section4 {
+    width: 35vw;
+    /* background-color: #ff1616; */
+  }
+}
+/* **********************media queries*********************** */
+/* for mobiles  */
+@media screen and (max-width: 426px) {
+  #main {
+    /* background-color: olive; */
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+
+    gap: 20px;
+  }
+  .mainLeftpanel {
+    width: 95vw;
+    height: 100vh;
+  }
+  #section1 {
+    width: 95vw;
+    height: 95vh;
+  }
+  .mainRightpanel {
+    width: 255vw;
+    height: 95vh;
+    gap: 10px;
+  }
+  #section2,
+  #section3,
+  #section4 {
+    height: 95vh;
+    width: 85vw;
+    /* background-color: #ff1616; */
+  }
 }
