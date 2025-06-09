@@ -125,6 +125,11 @@
   gap: 5px;
   align-items: center;
 }
+.radioPerson {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
 #mainButtons {
   width: 100%;
   height: 7%;
@@ -286,7 +291,6 @@
     display: flex;
     flex-direction: column;
     overflow: scroll;
-
     gap: 20px;
   }
   .mainLeftpanel {
@@ -296,6 +300,10 @@
   #section1 {
     width: 95vw;
     height: 95vh;
+    padding: 2%;
+  }
+  #mainButtons {
+    margin-bottom: 15px;
   }
   .mainRightpanel {
     width: 255vw;
