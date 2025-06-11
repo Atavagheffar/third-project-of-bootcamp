@@ -46,6 +46,7 @@
               </svg>
               <p>Subtask</p>
               <svg
+                id="addSubtask"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -73,21 +74,22 @@
                 </defs>
               </svg>
             </div>
-            <div class="checkbox">
-              <input
-                type="checkbox"
-                name="box"
-                id="box1"
-                value="subtask-A"
-                checked
-              />
-              <label for="">subtask A</label>
-            </div>
-            <div class="checkbox">
-              <input type="checkbox" name="box" id="box2" value="subtask-B" />
-              <label for="box2">subtask B</label>
+
+            <!-- subtask new code -->
+            <div id="subtasks">
+              <div id="subtaskInputArea" style="display: none">
+                <input
+                  type="text"
+                  id="newSubtaskText"
+                  placeholder="Enter subtask..."
+                />
+                <button id="confirmSubtask">Add</button>
+              </div>
+              <!-- subtask list -->
+              <div id="subtaskList"></div>
             </div>
           </div>
+          <!-- assignee  -->
           <div id="assignee">
             <div id="assigneeHeader">
               <svg
@@ -112,32 +114,33 @@
               <p>*</p>
             </div>
             <div id="radiobuttons">
-              <div class="radioPerson">
+              <label for="">
                 <input
                   type="radio"
                   name="Assignee"
                   id="person1"
                   value="Taha"
                   checked
-                />
-                <label for="person1">Taha Hosseinpour</label>
-              </div>
-              <div class="radioPerson">
-                <input
+                />Taha Hosseinpour</label
+              >
+
+              <label for=""
+                ><input
                   type="radio"
                   name="Assignee"
                   id="person2"
                   value="S.hossein"
-                /><label for="person2">S.h Mostafavi</label>
-              </div>
-              <div class="radioPerson">
-                <input
+                />S.h Mostafavi</label
+              >
+
+              <label for=""
+                ><input
                   type="radio"
                   name="Assignee"
                   id="person3"
                   value="Milad"
-                /><label for="person3">Milad Mirzaei</label>
-              </div>
+                />Milad Mirzaei</label
+              >
             </div>
           </div>
           <!-- <input type="date" name="" id="datePick" /> -->
